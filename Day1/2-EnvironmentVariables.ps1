@@ -79,15 +79,18 @@ Name       Id         CPU StartTime
 explorer 1844 6779.421875 17/03/2025 08:04:26
 #>
 
+
+
+
 # does get-process show all attributes by default?
 # No, it doesn't. It shows a subset of the attributes by default.
-Get-Process explorer | Format-List *
+Get-Process system | Format-List *
 
 #let's select some of the attributes/properties
-Get-Process explorer | Format-List name, id, cpu, starttime
+Get-Process system | Format-List name, id, cpu, starttime
 
 #let out the results to a file
-Get-Process explorer | Format-List name, id, cpu, starttime | Out-File -FilePath C:\Temp\explorer.txt
+Get-Process system | Format-List name, id, cpu, starttime | Out-File -FilePath C:\Temp\explorer.txt
 
 #let's open the file in notepad
 notepad C:\Temp\explorer.txt
@@ -105,6 +108,8 @@ notepad C:\Temp\explorer.txt
 # challange 3: find a command that gets event logs on your system using find-command and use it to get the last 10 event logs.
 # Hint: find-command, get-help
  
+#approved verbs in PowerShell
+Get-Verb
 
 <#
  Day 1: 1-IntroductionToPowerShell
@@ -114,21 +119,5 @@ notepad C:\Temp\explorer.txt
  Day 1: 5-Processes
  Day 1: 6-Services
  Day 1: 7-Registry
- Day 1: 8-Modules
- Day 1: 9-Scripts
- Day 1: 10-Debugging
- Day 1: 11-ErrorHandling
- Day 1: 12-Profile
- Day 1: 13-RemoteManagement
- Day 1: 14-SSHRemoting
- Day 1: 15-WebRequests
- Day 1: 16-RESTAPI
- Day 1: 17-DataFormats
- Day 1: 18-Webscraping
- Day 1: 19-PowerShellGallery
- Day 1: 20-UseCases
- Day 1: 21-LabEnvironment
- Day 1: 22-Commands
- Day 1: 23-Resources
- Day 1: 24-Conclusion
+ 
 #>
