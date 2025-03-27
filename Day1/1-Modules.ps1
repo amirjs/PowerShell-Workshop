@@ -173,6 +173,20 @@ Get-Help Get-WUList -Detailed
 # Let's run a modified version of example 2
 Get-WindowsUpdate -IsInstalled -ShowPreSearchCriteria -Verbose
 
+# Update a module
+Update-Module -Name PSWindowsUpdate 
+
+
+
+
+# the next time you load powershell, the module is installed but it needs importing
+Import-module -Name PSWindowsUpdate
+
+
+# uninstall the module
+Uninstall-Module -Name PSWindowsUpdate
+
+
 <#
 PreSearchCriteria: IsInstalled = 1 and IsHidden = 0
 VERBOSE: DESKTOP-4CJSR2B (25/03/2025 22:20:41): Connecting to Microsoft Update server. Please wait...
@@ -202,7 +216,7 @@ DESKTOP-4... -DI----    KB5053598   86GB 2025-03 Cumulative Update for Windows 1
 # Task: Write a script to list all available modules on your system along with their paths.
 # Hint: Use Get-Module with Select-Object to display the Name and Path properties.
 
-# Challenge 2: Find and install a module from the PowerShell Gallery
+# Challenge 2: Find and install a module from the PowerShell Gallery of an earlier version (not the current version)
 # Task: Search for a module named "Az" in the PowerShell Gallery and install it.
 # Hint: Use Find-Module and Install-Module cmdlets.
 

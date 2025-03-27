@@ -29,6 +29,15 @@ Get-ChildItem Env:*TEMP*
 # select the name attribute of the environment variables that contain the word "TEMP"
 Get-ChildItem Env:*TEMP* | Select-Object -Property Name
 
+# Get the current user context
+$env:USERNAME
+
+#What if you need to run powershell using a different account (service account or admc?)
+
+# Run powershell as differnt user
+Start-Process Powershell -Verb runasuser 
+
+
 # what is piping in PowerShell?
 # Piping (|) in PowerShell is the act of passing the output of one command as the input to another command.
 # This allows you to chain commands together to perform more complex operations.
@@ -111,13 +120,3 @@ notepad C:\Temp\explorer.txt
 #approved verbs in PowerShell
 Get-Verb
 
-<#
- Day 1: 1-IntroductionToPowerShell
- Day 1: 2-EnvironmentVariables
- Day 1: 3-FilesAndFolders
- Day 1: 4-TextFiles
- Day 1: 5-Processes
- Day 1: 6-Services
- Day 1: 7-Registry
- 
-#>
